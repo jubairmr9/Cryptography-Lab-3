@@ -21,13 +21,13 @@ public class FermatPrimality {
             return false;
 
         int counter = 0;
-        Random rand = new Random();
+        Random random = new Random();
 
         for (int i = 0; i < someVal; i++) {
 
             counter++;
 
-            BigInteger q0 = BigInteger.valueOf(Math.abs(rand.nextInt()));
+            BigInteger q0 = BigInteger.valueOf(Math.abs(random.nextInt()));
             BigInteger q1 = q0.mod(n.subtract(BigInteger.valueOf(1))).add(BigInteger.valueOf(1));
 
             if (!(q1.modPow(n.subtract(BigInteger.valueOf(1)), n).equals(BigInteger.valueOf(1)))) {
